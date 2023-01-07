@@ -3,7 +3,7 @@ from databases import Database
 
 class DB:
     def __init__(self):
-        self.db = Database("sqlite+aiosqlite:///bot.db")
+        self.db = Database("postgresql://postgres:C2lKTX9msO4Nrf7if0RC@containers-us-west-145.railway.app:7063/railway")
 
     async def connect(self):
         return await self.db.connect()
