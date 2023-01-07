@@ -11,7 +11,7 @@ class Config:
     log_channel = int(getenv("LOG_CHANNEL"))
     fsub_chid = int(getenv("FORCESUB_CHANNEL"))
     db_chid = int(getenv("DB_CHANNEL"))
-    blacklisted_channel = [int(x) for x in getenv("BLACKLISTED_CHANNEL", "123").split(",") if x is not None]
+    blacklisted_channel = [int(x) for x in getenv("BLACKLISTED_CHANNEL", "-1001874961981").split(",") if x is not None]
     channel1 = int(getenv("CHANNEL_1"))
     channel2 = int(getenv("CHANNEL_2"))
     channel3 = int(getenv("CHANNEL_3"))
