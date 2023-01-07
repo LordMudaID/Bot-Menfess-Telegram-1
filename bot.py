@@ -124,7 +124,7 @@ async def start_hndlr(c: Client, m: Message):
     filters.text
     | filters.media
     & ~filters.sticker
-    & ~filters.edited
+    
 )
 async def send_media_(c: Client, m: Message):
     chat_type = m.chat.type
