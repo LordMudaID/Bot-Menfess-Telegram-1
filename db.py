@@ -35,7 +35,7 @@ class DB:
                 "ban_duration": 0,
                 "ban_reason": ""
             }
-            return await self.db.execute("insert into user_db values (:user_id, :is_banned, :ban_duration, :ban_reason)
+            return await self.db.execute("insert into user_db values (:user_id, :is_banned, :ban_duration, :ban_reason)", data)
     async def is_exist(self, user_id: int):
         data = await self.db.fetch_one("select * from user_db where user_id = :user_id", {"user_id": user_id})
         return bool(data)
